@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "redis-rate-limit",
+  "builds": [
+    {
+      "src": "index.py",
+      "use": "@now/python@canary",
+      "config": { "maxLambdaSize": "25mb" }
+    }
+  ],
+  "routes": [{"src": "/(.*)", "dest": "/"}]
+}
+
